@@ -18,7 +18,7 @@ Production-ready API service that predicts which NBA players are likely to impro
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install .[dev]
+pip install -r requirements.txt
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
