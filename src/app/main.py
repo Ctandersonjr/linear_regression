@@ -19,7 +19,7 @@ def predict_improvement(
     season: int = Query(2022, ge=1980, le=2100),
     player_count: int = Query(200, ge=50, le=400),
     top_n: int = Query(10, ge=1, le=25),
-) -> dict:
+) -> dict(...):
     try:
         dataset = build_training_data(client, season=season, player_count=player_count)
         result = train_and_rank(dataset, season=season, top_n=top_n)
