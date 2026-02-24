@@ -11,14 +11,14 @@ Production-ready API service that predicts which NBA players are likely to impro
 ## API endpoints
 
 - `GET /health` -> service health check.
-- `GET /predict-improvement?season=2022&player_count=200&top_n=10` -> trains a linear regression model from API data and returns typed metrics and top projected improvers.
+- `GET /predict-improvement?season=2022&player_count=200&top_n=10` -> trains a linear regression model from API data and returns top projected improvers.
 
 ## Run locally
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install .[dev]
+pip install -r requirements.txt
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
